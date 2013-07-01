@@ -1,0 +1,227 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/back9" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/stylecoat"
+                    android:layout_width="81dp"
+                    android:layout_height="108dp"
+                    android:onClick="clickView" />
+
+                <Gallery
+                    android:id="@+id/gallery1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="108dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/styleshirt"
+                    android:layout_width="81dp"
+                    android:layout_height="108dp"
+                    android:onClick="clickView" />
+
+                <Gallery
+                    android:id="@+id/gallery2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="108dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/styletrousers"
+                    android:layout_width="81dp"
+                    android:layout_height="108dp"
+                    android:onClick="clickView" />
+
+                <Gallery
+                    android:id="@+id/gallery3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="108dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/styleaccessory"
+                    android:layout_width="81dp"
+                    android:layout_height="108dp"
+                    android:onClick="clickView" />
+
+                <Gallery
+                    android:id="@+id/gallery4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="108dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="saveStyle"
+                android:text="Save"
+                android:textSize="14sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="clearStyle"
+                android:text="Clear"
+                android:textSize="14sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="clickWeather"
+                android:text="Weather"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="deleteStyle"
+                android:text="Delete"
+                android:textSize="14sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="refreshStyle"
+                android:text="Refresh"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Style ListView -->
+
+    <LinearLayout
+        android:id="@+id/stylelistlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@drawable/back9" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:onClick="cancelStyleList"
+            android:text="Cancel and Go Back" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#EBC37A"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="My Favorite Collections"
+                android:textIsSelectable="false" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/stylelistView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <!-- UI for weather -->
+
+    <LinearLayout
+        android:id="@+id/weatherLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:background="@drawable/back9" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/zipcodeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Input US zip code." />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:onClick="clickGetWeather"
+                android:text="Go"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/switchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:onClick="clickOpen"
+                android:text="ON"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:onClick="goBackFromWeather"
+            android:text="Go Back" />
+
+        <TextView
+            android:id="@+id/weatherCondition"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="weather condition"
+            android:minLines="5"
+            android:textIsSelectable="false" />
+    </LinearLayout>
+
+</FrameLayout>

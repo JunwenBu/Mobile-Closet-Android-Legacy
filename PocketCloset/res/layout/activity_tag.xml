@@ -1,0 +1,164 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/selectLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/back6"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weather"
+            android:textSize="15sp" />
+
+        <RadioGroup
+            android:id="@+id/radioWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/hotBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hot" />
+
+            <RadioButton
+                android:id="@+id/rwarmBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warm" />
+
+            <RadioButton
+                android:id="@+id/coldBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cold" />
+
+            <RadioButton
+                android:id="@+id/rainBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rain" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textSize="15sp" />
+
+        <RadioGroup
+            android:id="@+id/radioType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/coatBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coat" />
+
+            <RadioButton
+                android:id="@+id/shirtBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shirt" />
+
+            <RadioButton
+                android:id="@+id/trouserBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trouser" />
+
+            <RadioButton
+                android:id="@+id/accessoryBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accessory" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:onClick="clickSave"
+                android:text="Save" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:onClick="clickCancel"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:onClick="clickDelete"
+                android:text="Delete" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/listViewLienarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#EBC37A"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Item"
+                android:textIsSelectable="false" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Temp"
+                android:textIsSelectable="false" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:textIsSelectable="false" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Tag" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/back6" />
+    </LinearLayout>
+
+</FrameLayout>

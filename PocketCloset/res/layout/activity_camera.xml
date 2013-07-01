@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".CameraActivity" >
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="10dp" >
+
+        <Button
+            android:id="@+id/cameraBtnFocus"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:onClick="clickBtnFocus"
+            android:background="@drawable/focus" />
+
+        <Button
+            android:id="@+id/cameraBtnShoot"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignTop="@id/cameraBtnFocus"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/cameraBtnFocus"
+            android:onClick="clickBtnShoot"
+            android:background="@drawable/shoot" />
+    </RelativeLayout>
+
+</FrameLayout>
